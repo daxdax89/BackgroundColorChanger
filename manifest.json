@@ -4,13 +4,18 @@
   "name": "Background Color Changer",
   "description": "This extension allows the user to change the background color of the current page.",
   "version": "1.0",
-
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+      "js": ["popup.js"]
+    }
+  ],
   "permissions": [
-  "activeTab",
-  "storage"
+    "activeTab",
+    "storage",
+    "tabs"
   ]
 }
